@@ -1,0 +1,441 @@
+:root {
+	font-size: 16px;
+	--white: #fff;
+	--yellow: rgb(236, 221, 40);
+	--lightergrey: rgba(172, 172, 172, 0.8);
+	--lightgrey: rgba(61, 61, 61, 0.6);
+	--darkgrey: rgb(31, 31, 31);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: url(./img/background2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+
+	width: 100vw;
+	height: 100vh;
+	font-family: "Roboto", sans-serif;
+	color: var(--yellow);
+}
+
+header {
+	height: 5vh;
+}
+
+#main-div-inputs,
+header {
+	justify-content: space-around;
+}
+
+main,
+#main-div-buttons,
+thead tr,
+.detail-window {
+	padding: 1rem;
+}
+
+header,
+main,
+#main-div-buttons,
+.detail-window {
+	width: 100vw;
+}
+
+#logo {
+	width: 60vw;
+	max-width: 70rem;
+}
+
+button {
+	cursor: pointer;
+}
+
+header,
+main,
+#nav-container,
+#nav-div-buttons,
+#main-div-buttons,
+#main-div-inputs,
+#searchIdDiv,
+#searchTextDiv,
+#table-div,
+#action-div,
+#action-div button,
+#page-container,
+.detail-window {
+	display: flex;
+}
+
+#nav-container,
+#main-div-buttons,
+#main-div-inputs,
+#table-div {
+	flex-wrap: wrap;
+}
+
+main,
+#action-div,
+.detail-window {
+	flex-direction: column;
+}
+
+#nav-container {
+	padding: 0 1rem;
+	justify-content: space-between;
+	width: 90vw;
+	max-width: 80rem;
+}
+
+#nav-div-buttons,
+#searchIdDiv,
+#searchTextDiv,
+#main-div-inputs,
+main,
+.detail-window {
+	gap: 1rem;
+}
+
+#nav-div-buttons button,
+#main-div-buttons button,
+#main-div-inputs,
+#delete-selected-button,
+#page-container button,
+.detail-window button {
+	font-weight: bold;
+}
+
+#nav-div-buttons button,
+#main-div-inputs input,
+#page-container button,
+#page-container input,
+#page-container select {
+	height: 2rem;
+}
+
+#nav-div-buttons button {
+	width: 6rem;
+	border-radius: 5px;
+}
+
+#nav-div-buttons button:last-child:active,
+#main-div-buttons button,
+::placeholder,
+#main-div-inputs input,
+thead tr,
+#action-div button,
+#delete-selected-button,
+#page-container button,
+.detail-window button {
+	color: var(--yellow);
+}
+
+::placeholder,
+button {
+	font-size: 1rem;
+}
+
+#nav-div-buttons button:last-child:active,
+#nav-div-buttons button:first-child {
+	background-color: var(--darkgrey);
+}
+
+#nav-div-buttons button:first-child {
+	border: 1px solid var(--white);
+	color: var(--white);
+}
+
+#nav-div-buttons button:first-child:active {
+	color: var(--darkgrey);
+	background-color: white;
+	border: 1px solid var(--darkgrey);
+}
+
+#nav-div-buttons button:last-child {
+	border: 2px solid;
+	background-color: var(--yellow);
+}
+
+#nav-div-buttons button:last-child:active {
+	border: 1px solid var(--yellow);
+}
+
+#main-div-buttons,
+#table-div,
+#action-div,
+#action-div button,
+#page-container,
+.detail-window {
+	justify-content: center;
+}
+
+#main-div-buttons,
+header,
+main,
+#main-div-inputs,
+#table-div,
+#action-div,
+#action-div button,
+#page-container,
+.detail-window {
+	align-items: center;
+}
+
+#main-div-buttons {
+	gap: 2rem;
+}
+
+#main-div-buttons button,
+#main-div-buttons button:active,
+#main-table,
+tbody,
+#action-div button,
+#delete-selected-button,
+#page-container button,
+#page-container input,
+#page-container select,
+.detail-window button,
+.detail-window div {
+	border: 2px solid var(--yellow);
+}
+
+header,
+#main-div-buttons button,
+#main-div-inputs input,
+#main-table,
+tbody,
+#delete-selected-button,
+#page-container button,
+#page-container input,
+#page-container select,
+.detail-window button,
+.detail-window div {
+	background-color: var(--lightgrey);
+}
+
+#main-div-buttons button {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+#main-div-buttons button:hover,
+#main-div-buttons button:active,
+#main-div-buttons button:focus {
+	transform: scale(1.2);
+}
+
+#main-div-buttons button:hover {
+	transition-duration: 0.2s;
+}
+
+#main-div-buttons button:active,
+#main-div-inputs,
+#action-div button {
+	font-size: 1.25rem;
+}
+
+.detail-window table {
+	width: 80vw;
+	max-width: 80rem;
+}
+
+.detail-window tr {
+	word-wrap: break-word;
+	white-space: normal;
+	word-break: break-word;
+}
+
+#main-div-buttons button:active {
+	box-shadow: 3px 3px 1rem var(--yellow);
+}
+
+#main-div-buttons button:focus {
+	background: var(--lightergrey);
+	box-shadow: 5px 5px 2rem var(--yellow);
+}
+
+#main-div-inputs {
+	padding: 1rem 0;
+	border-radius: 0.75rem;
+}
+
+#main-div-inputs input {
+	border-radius: 0.4rem;
+	border: 1px solid var(--yellow);
+	padding-left: 3px;
+}
+
+#main-table {
+	border-radius: 0.6rem;
+
+	width: 90vw;
+	max-width: 80rem;
+}
+
+tbody td,
+#action-div button,
+#page-container input,
+#page-container select {
+	text-align: center;
+}
+
+#action-div {
+	padding: 0.5rem;
+	gap: 0.3rem;
+}
+
+#action-div button,
+#delete-selected-button,
+#page-container button,
+#page-container input,
+#page-container select,
+.detail-window button {
+	border-radius: 0.5rem;
+}
+
+#action-div button {
+	width: 3rem;
+	height: 3rem;
+	background-color: rgba(133, 133, 133, 0.6);
+}
+
+#action-div button:hover {
+	transform: scale(1.1);
+}
+
+input[type="checkbox"] {
+	width: 1rem;
+	height: 1rem;
+	accent-color: var(--yellow);
+}
+
+#delete-selected-button {
+	position: relative;
+}
+
+header,
+#page-container {
+	font-size: 1.5rem;
+}
+
+#page-container {
+	padding: 1.5rem;
+	gap: 0.5rem;
+}
+
+#page-container button {
+	width: 2rem;
+	height: 2rem;
+}
+
+#page-container button:hover {
+	transform: scale(1.1);
+	transition-duration: 0.2s;
+}
+
+.detail-window {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.detail-window button,
+#delete-selected-button {
+	width: 6rem;
+	height: 2.5rem;
+}
+
+.detail-window button:hover {
+	transform: scale(1.1);
+	transition-duration: 0.2s;
+}
+
+.detail-window div {
+	border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	header {
+		height: 9vh;
+	}
+
+	#nav-container {
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		text-align: center;
+	}
+
+	#main-div-inputs,
+	#nav-container {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 620px) {
+	#nav-container {
+		gap: 0.1rem;
+	}
+	#main-div-buttons {
+		gap: 1rem;
+	}
+
+	#main-div-buttons button {
+		height: 3rem;
+	}
+
+	#main-div-buttons button:hover {
+		transform: scale(1.1);
+		transition-duration: 0.2s;
+	}
+
+	#main-div-inputs span {
+		display: none;
+	}
+
+	#main-div-inputs,
+	#main-div-buttons {
+		flex-direction: column;
+	}
+
+	#main-div-inputs,
+	#main-div-buttons button {
+		width: 100%;
+	}
+	#main-div-inputs input {
+		width: 90vw;
+	}
+
+	#action-div {
+		gap: 0.1rem;
+		padding: 0.2rem;
+	}
+
+	#action-div button {
+		width: 2rem;
+		height: 2rem;
+		font-size: 1rem;
+	}
+
+	thead tr {
+		color: var(--yellow);
+	}
+
+	tbody td,
+	thead tr {
+		font-size: 0.75rem;
+	}
+}
