@@ -344,11 +344,24 @@ header,
 
 .detail-window {
 	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	z-index: 1000;
 	left: 0;
 	top: 0;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.9);
+}
+
+#newwindow-div {
+	display: flex;
+	border: none;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: transparent;
+	overflow-y: auto;
 }
 
 .detail-window button,
