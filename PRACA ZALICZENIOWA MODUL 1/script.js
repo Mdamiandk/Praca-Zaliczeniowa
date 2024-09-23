@@ -264,10 +264,12 @@ function handleButtonClick(buttonKey) {
 
 					detailButton.addEventListener("click", () => {
 						const newWindow = document.createElement("div");
+						const newWindowDiv = document.createElement("div");
 
+						newWindowDiv.id = "newwindow-div";
 						newWindow.className = "detail-window";
 						newWindow.id = "newwindow";
-
+						
 						const detailContent = document.createElement("div");
 						const detailThead = document.createElement("thead");
 						const detailTbody = document.createElement("tbody");
@@ -306,10 +308,11 @@ function handleButtonClick(buttonKey) {
 							document.body.removeChild(newWindow);
 						});
 
-						newWindow.appendChild(closeButton);
-						newWindow.appendChild(detailContent);
+						newWindowDiv.appendChild(closeButton);
+						newWindowDiv.appendChild(detailContent);
 
 						document.body.appendChild(newWindow);
+						newWindow.appendChild(newWindowDiv);
 					});
 
 					const checkbox = document.createElement("input");
@@ -480,8 +483,17 @@ function handleButtonClick(buttonKey) {
 		leftArrowButton.disabled = currentPage === 1;
 		rightArrowButton.disabled =
 			currentPage === Math.ceil(totalRows / itemsPerPage);
+		
+		function inputPlaceHolder() {
+			const searchIdInput = document.getElementById("searchId");
+			searchIdInput.placeholder = `1 from ${allRows.length}`;
+			return;
+		}
 
-		searchIdInput.addEventListener("input", (e) => {
+		inputPlaceHolder();
+	}
+
+	searchIdInput.addEventListener("input", (e) => {
 			const rows = document.querySelectorAll("tbody tr");
 			const value = e.target.value;
 			if (!/^\d*$/.test(value)) {
@@ -520,14 +532,6 @@ function handleButtonClick(buttonKey) {
 				}
 			});
 		});
-		function inputPlaceHolder() {
-			const searchIdInput = document.getElementById("searchId");
-			searchIdInput.placeholder = `1 from ${allRows.length}`;
-			return;
-		}
-
-		inputPlaceHolder();
-	}
 
 	//
 
